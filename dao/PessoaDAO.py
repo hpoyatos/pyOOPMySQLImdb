@@ -26,4 +26,18 @@ class PessoaDAO:
 
             return pessoas
         except Exception as e:
-            return e
+            print(e)
+            #return e
+
+    #método save(): recebe um objeto do tipo pessoa e retorna um booleano (deu certo, não deu certo....)
+    def save(self, _pessoa):
+        sql = f"INSERT INTO pessoa (nome) VALUES ('{_pessoa.nome}')"
+
+        try:
+            self.cursor.execute(sql)
+            self.conexao.commit()
+            _pessoa.id = self.cursor.lastrowid
+            return True
+        except Exception as e:
+            print(e)
+            return False

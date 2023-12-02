@@ -1,5 +1,6 @@
 #1o. passo: importar o conector
 import mysql.connector
+import config
 
 class Database:
   conexao = None
@@ -11,7 +12,7 @@ class Database:
       self.conexao = mysql.connector.connect(
         host="db4free.net",
         user="anima_imdb",
-        password="",
+        password=config.senha_mysql,
         database="anima_imdb"
       )
 
