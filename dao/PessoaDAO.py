@@ -27,6 +27,7 @@ class PessoaDAO:
             return pessoas
         except Exception as e:
             print(e)
+
             #return e
 
     #método save(): recebe um objeto do tipo pessoa e retorna um booleano (deu certo, não deu certo....)
