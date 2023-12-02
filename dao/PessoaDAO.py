@@ -26,4 +26,5 @@ class PessoaDAO:
 
             return pessoas
         except Exception as e:
-            return e
+            print(e)
+            #return e
